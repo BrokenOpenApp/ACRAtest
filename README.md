@@ -1,0 +1,1 @@
+An simple Android app that crashes a lot to test ACRA.
