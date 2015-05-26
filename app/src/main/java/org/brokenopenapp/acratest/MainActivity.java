@@ -4,6 +4,8 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import org.acra.ACRA;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -12,6 +14,33 @@ public class MainActivity extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+	}
+
+
+	public void onClickCrash1 (View view) {
+		crashRuntimeException("CRASH HA HA BUTTON 1");
+	}
+
+	public  void onClickCrash2 (View view) {
+		crashRuntimeException("CRASH HA HA BUTTON 2");
+	}
+
+	public  void onClickCrash3 (View view) {
+		crashRuntimeException("CRASH HA HA BUTTON 3");
+	}
+
+	public  void onClickCrash4 (View view) {
+		String s = null;
+		int i = s.length();
+	}
+
+	protected void crashRuntimeException(String msg) {
+		ACRA.getErrorReporter().handleException(new RuntimeException(msg));
+	}
+
+	public void  onClickCrash5 (View view) {
+
+		crashRuntimeException("CRASH HA HA BUTTON 5");
 	}
 
 
